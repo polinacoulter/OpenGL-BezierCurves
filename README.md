@@ -7,8 +7,8 @@ Right click for menu with options to add curve or set the color of the last clic
     - void DrawCurve(); // draws the curve by approximating it at about 20 evaluation points.
     - void DrawControlPoints(); // draws the 4 control points as circles.
     - int IsPicked(float x,float y);
-        - // returns <n> if x,y is within <radius> of control point <n>.
-	- // returns -1 if x,y is not close to any of the 4 control points.
+      - // returns <n> if x,y is within <radius> of control point <n>.
+      - // returns -1 if x,y is not close to any of the 4 control points.
 - Display method calls DrawCurve and DrawControlPoints
 - The formula used for evaluating a Bezier curve:
     - p= p0*(1-t)*(1-t)*(1-t) + 3*p1*(1-t)*(1-t)*t + 3*p2*(1-t)*t*t + p3*t*t*t;
