@@ -13,7 +13,12 @@ Right click for menu with options to add curve or set the color of the last clic
 - The formula used for evaluating a Bezier curve:
     - p= p0*(1-t)*(1-t)*(1-t) + 3*p1*(1-t)*(1-t)*t + 3*p2*(1-t)*t*t + p3*t*t*t;
 
-- The user is able to move the control points around with their mouse
-    - When the mouse goes does, check to see if its on a control point
-    - If it is, allow the mouse to drag that point, until the mouse button is released.
+- The user is provded with a menu option to add up to 5 Bezier curves and customize each curves color
+    - Control points are alterable
+    - The user is able to move the control points around with their mouse
+      - When the mouse goes does, check to see if its on a control point
+      - If it is, allow the mouse to drag that point, until the mouse button is released.
     - Curve dynamically updates as its control points are altered.
+      - void motion(int x, int y); // gets called during a mouse drag.
+        - implements GLUT callback function glutMotionFunc(motion);
+
